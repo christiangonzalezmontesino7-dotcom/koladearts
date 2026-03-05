@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pieza 1 — Post Lanzamiento 1080x1080</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+  background:#1A1A1A; 
+  font-family:"Cormorant Garamond",serif; 
+  padding:3rem 2rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.page-title {
+  font-family:"DM Mono",monospace;
+  font-size:0.9rem;
+  letter-spacing:0.3em;
+  color:#666;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.capture-note {
+  font-family:"DM Mono",monospace;
+  font-size:0.7rem;
+  color:#555;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  margin-bottom:4rem;
+  text-align:center;
+}
+
+/* PIEZA 1 — POST LANZAMIENTO 1080x1080px */
+.post-launch {
+  width:1080px;
+  height:1080px;
+  background:#0F1F16;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:80px;
+}
+
+/* Grain */
+.post-launch::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity:0.5;
+  mix-blend-mode:overlay;
+  pointer-events:none;
+  z-index:1;
+}
+
+.launch-photo {
+  position:absolute;
+  right:-20px;
+  top:0;
+  bottom:0;
+  width:54%;
+  object-fit:cover;
+  object-position:center top;
+  opacity:0.55;
+  mix-blend-mode:luminosity;
+}
+.launch-photo-fade {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right, #0F1F16 38%, transparent 75%),
+              linear-gradient(to top, #0F1F16 20%, transparent 50%);
+  z-index:1;
+}
+.launch-vline {
+  position:absolute;
+  left:200px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom, transparent, rgba(114,47,55,0.4), transparent);
+  z-index:2;
+}
+.launch-content {
+  position:relative;
+  z-index:3;
+  max-width:560px;
+}
+.launch-eyebrow {
+  font-family:"DM Mono",monospace;
+  font-size:0.75rem;
+  letter-spacing:0.4em;
+  color:#C9A84C;
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+.launch-brand {
+  line-height:1;
+  margin-bottom:0.3rem;
+}
+.launch-brand-k {
+  font-family:"Playfair Display",serif;
+  font-size:7.5rem;
+  font-weight:900;
+  color:#F0EBE3;
+  display:block;
+  line-height:0.88;
+  letter-spacing:-0.02em;
+}
+.launch-brand-a {
+  font-family:"Dancing Script",cursive;
+  font-size:5rem;
+  font-weight:700;
+  color:#C9A84C;
+  display:block;
+  text-align:right;
+  margin-top:-0.35em;
+  line-height:1;
+}
+.launch-divider {
+  width:60px;
+  height:2px;
+  background:#722F37;
+  margin:2rem 0;
+}
+.launch-tagline {
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.55rem;
+  font-style:italic;
+  color:rgba(240,235,227,0.8);
+  line-height:1.5;
+  max-width:440px;
+  margin-bottom:2.5rem;
+}
+.launch-cta {
+  display:inline-flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.launch-cta-btn {
+  font-family:"DM Mono",monospace;
+  font-size:0.7rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  background:#722F37;
+  color:#F0EBE3;
+  padding:1rem 2.2rem;
+  border:none;
+}
+.launch-cta-tag {
+  font-family:"DM Mono",monospace;
+  font-size:0.62rem;
+  letter-spacing:0.15em;
+  color:rgba(240,235,227,0.35);
+  text-transform:uppercase;
+}
+.launch-logo {
+  position:absolute;
+  top:60px;
+  left:60px;
+  height:48px;
+  object-fit:contain;
+  z-index:3;
+  opacity:0.85;
+}
+.launch-handle {
+  position:absolute;
+  bottom:60px;
+  right:80px;
+  font-family:"DM Mono",monospace;
+  font-size:0.62rem;
+  letter-spacing:0.2em;
+  color:rgba(240,235,227,0.25);
+  z-index:3;
+  text-transform:uppercase;
+}
+.launch-cupos {
+  position:absolute;
+  top:60px;
+  right:80px;
+  z-index:3;
+  text-align:right;
+}
+.launch-cupos-num {
+  font-family:"Playfair Display",serif;
+  font-size:3.5rem;
+  font-weight:900;
+  color:#722F37;
+  line-height:1;
+}
+.launch-cupos-label {
+  font-family:"DM Mono",monospace;
+  font-size:0.58rem;
+  letter-spacing:0.15em;
+  color:rgba(240,235,227,0.3);
+  text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+<p class="page-title">Pieza 01 — Post de Lanzamiento</p>
+<p class="capture-note">Captura a 1080×1080px · Zoom 100% · Instagram Post Cuadrado</p>
+
+<div class="post-launch">
+  <!-- IMAGEN DE FONDO - CAMBIA ESTA URL POR TU FOTO -->
+  <img class="launch-photo" src="image/jpeg;base64,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
